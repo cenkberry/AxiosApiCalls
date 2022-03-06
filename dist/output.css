@@ -624,6 +624,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 9rem;
 }
 
+.h-28 {
+  height: 7rem;
+}
+
+.max-h-32 {
+  max-height: 8rem;
+}
+
 .w-11\/12 {
   width: 91.666667%;
 }
