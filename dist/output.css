@@ -514,6 +514,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   justify-content: space-between;
 }
 
+.m-2 {
+  margin: 0.5rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -522,6 +526,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mx-0 {
   margin-left: 0px;
   margin-right: 0px;
+}
+
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.my-1 {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
 }
 
 .flex {
@@ -650,6 +664,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 41.666667%;
 }
 
+.w-6\/12 {
+  width: 50%;
+}
+
 .grid-cols-5 {
   grid-template-columns: repeat(5, minmax(0, 1fr));
 }
@@ -692,6 +710,29 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .justify-center {
   justify-content: center;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.border-2 {
+  border-width: 2px;
+}
+
+.border-gray-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(209 213 219 / var(--tw-border-opacity));
+}
+
+.border-gray-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(156 163 175 / var(--tw-border-opacity));
+}
+
+.border-red-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(248 113 113 / var(--tw-border-opacity));
 }
 
 .bg-gray-300 {
@@ -768,6 +809,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding: 0.75rem;
 }
 
+.p-2 {
+  padding: 0.5rem;
+}
+
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -778,6 +823,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 0.5rem;
 }
 
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
 .pl-3 {
   padding-left: 0.75rem;
 }
@@ -785,6 +835,126 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.placeholder\:mx-auto::-moz-placeholder {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.placeholder\:mx-auto:-ms-input-placeholder {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.placeholder\:mx-auto::placeholder {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.placeholder\:mx-0::-moz-placeholder {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.placeholder\:mx-0:-ms-input-placeholder {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.placeholder\:mx-0::placeholder {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.placeholder\:mx-20::-moz-placeholder {
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+.placeholder\:mx-20:-ms-input-placeholder {
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+.placeholder\:mx-20::placeholder {
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+.placeholder\:mx-7::-moz-placeholder {
+  margin-left: 1.75rem;
+  margin-right: 1.75rem;
+}
+
+.placeholder\:mx-7:-ms-input-placeholder {
+  margin-left: 1.75rem;
+  margin-right: 1.75rem;
+}
+
+.placeholder\:mx-7::placeholder {
+  margin-left: 1.75rem;
+  margin-right: 1.75rem;
+}
+
+.placeholder\:px-4::-moz-placeholder {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.placeholder\:px-4:-ms-input-placeholder {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.placeholder\:px-4::placeholder {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.placeholder\:px-5::-moz-placeholder {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.placeholder\:px-5:-ms-input-placeholder {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.placeholder\:px-5::placeholder {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.placeholder\:px-52::-moz-placeholder {
+  padding-left: 13rem;
+  padding-right: 13rem;
+}
+
+.placeholder\:px-52:-ms-input-placeholder {
+  padding-left: 13rem;
+  padding-right: 13rem;
+}
+
+.placeholder\:px-52::placeholder {
+  padding-left: 13rem;
+  padding-right: 13rem;
+}
+
+.placeholder\:px-7::-moz-placeholder {
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+}
+
+.placeholder\:px-7:-ms-input-placeholder {
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+}
+
+.placeholder\:px-7::placeholder {
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
 }
 
 @media (min-width: 768px) {
@@ -822,5 +992,20 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:grid-cols-6 {
     grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .md\:placeholder\:px-2::-moz-placeholder {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .md\:placeholder\:px-2:-ms-input-placeholder {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .md\:placeholder\:px-2::placeholder {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 }
