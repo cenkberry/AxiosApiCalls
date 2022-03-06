@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components{
+   
+   .flexy{
+    @apply flex items-center justify-center
+   }
+   .flexbet{
+    @apply flex justify-between items-center
+   }
+}
