@@ -7,3 +7,4 @@ const btnCus = document.querySelector('.btnCus');
 const btnTrn = document.querySelector('.btnTrn');
 const btnErr = document.querySelector('.btnErr');
 const btnCan = document.querySelector('.btnCan');
+
