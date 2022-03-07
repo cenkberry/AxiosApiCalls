@@ -7,6 +7,7 @@ const btnCus = document.querySelector('.btnCus');
 const btnTrn = document.querySelector('.btnTrn');
 const btnErr = document.querySelector('.btnErr');
 const btnCan = document.querySelector('.btnCan');
+const result = document.querySelector('.result');
 
 btnGet.addEventListener("click" , getPosts);
 btnPos.addEventListener("click" , postIt);
@@ -15,10 +16,11 @@ btnDel.addEventListener("click" , deleteIt);
 btnSim.addEventListener("click" , simReq);
 btnCus.addEventListener("click" , customHeaders);
 
-
-
 function getPosts(){
-  console.log("getPosts")
+  axios
+    .get('https://my-json-server.typicode.com/cenkberry/AxiosDB/posts')
+    .then(res => showPosts(res))
+    .catch(err => console.log(err));
 }
 
 function postIt(){
@@ -39,4 +41,12 @@ function simReq(){
 
 function customHeaders(){
   console.log("sim request")
+}
+
+function showPosts(res){
+  result.innerHTML = `
+  <h1 class="text-2xl">${JSON.stringify(res.data, null , 2 )}</h1 class="text-2xl"><br> 
+  <h1 class="text-2xl">${JSON.stringify(res.data, null , 2 )}</h1 class="text-2xl"><br> 
+  <h1 class="text-2xl">${JSON.stringify(res.data, null , 2 )}</h1><br> 
+  `
 }
