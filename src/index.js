@@ -46,11 +46,18 @@ function putIt(){
 }
 
 function deleteIt(){
-  console.log("delete it")
+  axios.delete('https://my-json-server.typicode.com/cenkberry/AxiosDB/posts/1')
+    .then(res => showPosts(res))
+    .catch(err => console.log(err));
 }
 
 function simReq(){
-  console.log("sim request")
+  axios.all([
+    axios.get('https://my-json-server.typicode.com/cenkberry/AxiosDB/posts'),
+    axios.get('https://my-json-server.typicode.com/cenkberry/AxiosDB/comments'),
+  ])
+    .then(axios.spread( (posts , comments) => showPosts(comments)))
+    .catch(err => console.log(err));
 }
 
 function customHeaders(){
@@ -59,8 +66,10 @@ function customHeaders(){
 
 function showPosts(res){
   result.innerHTML = `
-  <h1 class="text-xl my-2 p-2 bg-yellow-400"><p>Status:</p> ${JSON.stringify(res.status, null , 2 )}</h1 class="text-2xl"><br> 
-  <h1 class="text-xl my-2 p-2 bg-green-400"><p>Headers:</p> ${JSON.stringify(res.headers, null , 2 )}</h1 class="text-2xl"><br> 
-  <h1 class="text-xl my-2 p-2 bg-red-400"><p>Datas:</p> ${JSON.stringify(res.data, null , 2 )}</h1><br> 
+  <pre class="text-sm p-1 bg-yellow-400"><p>Status:</p> ${JSON.stringify(res.status, null , 2 )}</pre>
+  <pre class="text-sm p-1 bg-green-400"><p>Headers:</p> ${JSON.stringify(res.headers, null , 2 )}</pre>
+  <pre class="text-sm p-1 bg-red-400"><p>Data:</p> ${JSON.stringify(res.data, null , 2 )}</pre>
+  <pre class="text-sm p-1 bg-yellow-400"><p>Config:</p> ${JSON.stringify(res.config, null , 2 )}</pre>
+  <pre class="text-sm p-1 bg-indigo-400 "><p>SimReq:</p> ${JSON.stringify(res.data, null , 2 )}</pre>
   `
 }
