@@ -17,27 +17,32 @@ btnSim.addEventListener("click" , simReq);
 btnCus.addEventListener("click" , customHeaders);
 
 function getPosts(){
-  axios
-    .get('https://my-json-server.typicode.com/cenkberry/AxiosDB/posts')
-    .then(res => showPosts(res))
-    .catch(err => console.log(err));
+  axios.get('https://my-json-server.typicode.com/cenkberry/AxiosDB/posts')
+       .then(res => showPosts(res))
+       .catch(err => console.log(err));
 }
 
 function postIt(){
-  axios({
-    method: 'post',
-    url: 'https://my-json-server.typicode.com/cenkberry/AxiosDB/posts',
-    data: {
-      id: "NewPost",
-      Title: "This is new post!"
-    }
-  })
+  axios.post('https://my-json-server.typicode.com/cenkberry/AxiosDB/posts' , 
+   {
+    user: "cenkberry",
+    number: "905319231902",
+    location : "Istanbul/Turkey"
+   })
     .then(res => showPosts(res))
     .catch(err => console.log(err));
 }
 
 function putIt(){
-  console.log("Put it")
+  axios.put('https://my-json-server.typicode.com/cenkberry/AxiosDB/posts/1', 
+   {
+    user: "cenkberry",
+    number: "905319231902",
+    location : "Istanbul/Turkey",
+    Reservation : "New"
+   })
+    .then(res => showPosts(res))
+    .catch(err => console.log(err));
 }
 
 function deleteIt(){
