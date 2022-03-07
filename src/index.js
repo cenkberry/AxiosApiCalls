@@ -24,7 +24,16 @@ function getPosts(){
 }
 
 function postIt(){
-  console.log("Post it")
+  axios({
+    method: 'post',
+    url: 'https://my-json-server.typicode.com/cenkberry/AxiosDB/posts',
+    data: {
+      id: "NewPost",
+      Title: "This is new post!"
+    }
+  })
+    .then(res => showPosts(res))
+    .catch(err => console.log(err));
 }
 
 function putIt(){
@@ -45,8 +54,8 @@ function customHeaders(){
 
 function showPosts(res){
   result.innerHTML = `
-  <h1 class="text-2xl">${JSON.stringify(res.data, null , 2 )}</h1 class="text-2xl"><br> 
-  <h1 class="text-2xl">${JSON.stringify(res.data, null , 2 )}</h1 class="text-2xl"><br> 
-  <h1 class="text-2xl">${JSON.stringify(res.data, null , 2 )}</h1><br> 
+  <h1 class="text-xl my-2 p-2 bg-yellow-400"><p>Status:</p> ${JSON.stringify(res.status, null , 2 )}</h1 class="text-2xl"><br> 
+  <h1 class="text-xl my-2 p-2 bg-green-400"><p>Headers:</p> ${JSON.stringify(res.headers, null , 2 )}</h1 class="text-2xl"><br> 
+  <h1 class="text-xl my-2 p-2 bg-red-400"><p>Datas:</p> ${JSON.stringify(res.data, null , 2 )}</h1><br> 
   `
 }
