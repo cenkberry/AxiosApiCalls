@@ -556,6 +556,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 1rem;
 }
 
+.flex {
+  display: flex;
+}
+
 .h-full {
   height: 100%;
 }
