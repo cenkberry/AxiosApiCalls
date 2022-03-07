@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 @layer components{
-   
    .flexy{
     @apply flex items-center justify-center
    }
