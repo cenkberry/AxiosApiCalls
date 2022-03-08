@@ -7,27 +7,27 @@
 </head>
 <body class="bg-gray-300 h-full">
 
-   <div class="flexy">
-      <h1 class="text-3xl my-3">Axios Project</h1>
+   <div class="container mx-auto flexy flex-col">
+      <h1 class="text-2xl my-2">User Test Panel</h1>
+      <h1 class="text-xl my-3">Register an User</h1>
+      <input type="text" class="userName my-1 px-1" placeholder="Enter an username">
+      <input type="text" class="passWord my-1 px-1" placeholder="Enter the password">
+      <input type="text" class="userLoc  my-1 px-1" placeholder="Enter your location">
    </div>
-   <div class="flexy">
      
-      <button class="btnGet rounded-md my-4 mx-2 py-1 px-2 bg-orange-500">GET</button>
-      <button class="btnPos rounded-md my-4 mx-2 py-1 px-2 bg-indigo-500">POST</button>
-      <button class="btnPut rounded-md my-4 mx-2 py-1 px-2 bg-slate-500">PUT/PATCH</button>
-      <button class="btnDel rounded-md my-4 mx-2 py-1 px-2 bg-red-500">DELETE</button>
-      <button class="btnSim rounded-md my-4 mx-2 py-1 px-2 bg-amber-500">Sim Request</button>
-      <button class="btnCus rounded-md my-4 mx-2 py-1 px-2 bg-gray-200">Custom Headers</button>
-      <button class="btnTrn rounded-md my-4 mx-2 py-1 px-2 bg-gray-200">Transform</button>
-      <button class="btnErr rounded-md my-4 mx-2 py-1 px-2 bg-gray-200">Error Handling</button>
-      <button class="btnCan rounded-md my-4 mx-2 py-1 px-2 bg-gray-200">Cancel</button>
+   <div class="flexy mt-2">
+     
+      <button class="btnGet rounded-md my-4 mx-2 py-1 px-2 bg-orange-500">GET Users</button>
+      <button class="btnPos rounded-md my-4 mx-2 py-1 px-2 bg-indigo-500">POST User</button>
+      <button class="btnPut rounded-md my-4 mx-2 py-1 px-2 bg-slate-500">PUT/PATCH User</button>
+      <button class="btnDel rounded-md my-4 mx-2 py-1 px-2 bg-red-500">DELETE Users</button>
       
    </div>
 
    <div class="container mx-auto mt-4 p-2 result">
       
    </div>
-   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
    <script src="./index.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </body>
 </html>
