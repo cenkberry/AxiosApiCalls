@@ -6,36 +6,53 @@
   <link href="./index.css" rel="stylesheet">
 </head>
 <body class="bg-gray-300 h-full">
-
-   <div class="container mx-auto flexy flex-col">
-      <h1 class="text-2xl my-2">User Test Panel</h1>
-      <h1 class="text-xl my-2">Register an User</h1>
-      <div class="my-1">
-         <p class="w-20">Username:</p>
-         <input type="text" class="userName my-1 px-1" placeholder="Enter an username">
-      </div>
-      <div class="my-1">
-         <p class="w-20">Password:</p>
-         <input type="text" class="passWord my-1 px-1" placeholder="Enter an username">
-      </div>
-      <div class="my-1">
-         <p class="w-20">Location:</p>
-         <input type="text" class="userLoc my-1 px-1" placeholder="Enter an username">
+   
+   <!-- Post Panel -->
+   <div class="container mx-auto flexy mt-10">
+         <button class="btnGet rounded-md my-4 mx-2 py-1 px-2 bg-orange-500 text-stone-100">GET Users</button>
+         <div class="flexy flex-col px-4 py-2 mx-3 bg-indigo-500">
+            <h1 class="text-xl my-2">User Post Panel</h1>
+         <div class="my-1">
+            <p class="w-20">Username:</p>
+            <input type="text" class="rounded userName my-1 px-1" placeholder="Enter an username">
          </div>
-   </div>
+         <div class="my-1">
+            <p class="w-20">Password:</p>
+            <input type="text" class="rounded passWord my-1 px-1" placeholder="Enter the password">
+         </div>
+         <div class="my-1">
+            <p class="w-20">Location:</p>
+            <input type="text" class="rounded userLoc my-1 px-1" placeholder="Enter your Location">
+         </div>
+         <button class="btnPos rounded-md my-4 mx-2 py-1 px-2 bg-cyan-500">POST User</button>
+      </div>
+      <!-- Post Panel -->
      
-   <div class="flexy mt-2">
-     
-      <button class="btnGet rounded-md my-4 mx-2 py-1 px-2 bg-orange-500">GET Users</button>
-      <button class="btnPos rounded-md my-4 mx-2 py-1 px-2 bg-indigo-500">POST User</button>
-      <button class="btnPut rounded-md my-4 mx-2 py-1 px-2 bg-slate-500">PUT/PATCH User</button>
-      <button class="btnDel rounded-md my-4 mx-2 py-1 px-2 bg-red-500">DELETE Users</button>
-      
+      <!-- Put Panel -->
+         <div class="flexy flex-col px-4 py-2 mx-3 bg-yellow-400">
+            <h1 class="text-xl my-2">User Put Panel</h1>
+         <div class="my-1">
+            <p class="w-20">Username:</p>
+            <input type="text" class="rounded changeUs my-1 px-1" placeholder="Enter an username">
+         </div>
+         <div class="my-1">
+            <p class="w-20">Password:</p>
+            <input type="text" class="rounded changePa my-1 px-1" placeholder="Enter the password">
+         </div>
+         <div class="my-1">
+            <p class="w-20">Location:</p>
+            <input type="text" class="rounded changeLo my-1 px-1" placeholder="Enter your Location">
+         </div>
+         <button class="btnPut rounded-md my-4 mx-2 py-1 px-2 bg-cyan-500">PUT/PATCH User</button>
+         </div>
+         <button class="btnDel rounded-md my-4 mx-2 py-1 px-2 bg-red-500 text-stone-100">DELETE Users</button>
    </div>
+     <!-- Put Panel -->
+   
+   <!-- Test Panel -->
+   <div class="container mx-auto mt-4 p-2 result"></div>
+   <!-- Test Panel -->
 
-   <div class="container mx-auto mt-4 p-2 result">
-      
-   </div>
    <script src="./index.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </body>
